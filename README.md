@@ -16,6 +16,12 @@
 - [Седмица 9](./week-9) - Пакетна система - Cabal.
 - [Седмица 10](./week-10) - Конкурентно програмиране (Control.Parallel).
 
+## Хранилища от предишни курсове
+
+- [FP1819](https://github.com/ekaranasuf/fp1819) - от Еси
+- [FP-Elective-2017](https://github.com/fmi-lab/fp-elective-2017) - от Тонката
+- [FMI-Functional-Programming-2016](https://github.com/6desislava6/FMI-Functional-Programming-2016) - от Деси
+
 ## Книги
 
 - [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/)
