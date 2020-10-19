@@ -13,8 +13,8 @@
   - Подкарване на код:
 
     - VSCode plugins
-    - [Haskelly](https://github.com/haskelly-dev/Haskelly)
-    - [vscode-haskell](https://github.com/haskell/vscode-haskell)
+      - [Haskelly](https://github.com/haskelly-dev/Haskelly)
+      - [vscode-haskell](https://github.com/haskell/vscode-haskell)
     - [GHCi](https://www.haskell.org/ghc/download.html)
     - [Haskell Platform](https://www.haskell.org/platform/)
 
@@ -145,10 +145,6 @@
         ghci> [ x*y | x <- [2,5,10], y <- [8,10,11], x*y > 50]
         [55,80,100,110]
         ```
-
-    - Кортежи (tuples)
-      - Синтаксис. Тип на кортеж. Кортежи в листи.
-      - `fst`, `snd`
 
 ## Задачи
 
