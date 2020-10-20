@@ -29,6 +29,10 @@ cat (ah : at) b = ah : cat at b
 elem' _ [] = False
 elem' a (h : t) = a == h || a `elem'` t
 
+-- elem 10000000 [1..]
+-- vs
+-- elem' 10000000 [1..]
+
 elemIndex a l = iter a l 0
   where
     iter _ [] _ = -1
@@ -36,10 +40,6 @@ elemIndex a l = iter a l 0
 
 movingWindow _ [] = []
 movingWindow size l@(_ : t) = take size l : movingWindow size t
-
--- elem 10000000 [1..]
--- vs
--- elem' 10000000 [1..]
 
 fst' (a, _) = a
 
@@ -55,6 +55,13 @@ toBinary n = toBinary (n `div` 2) ++ (show (n `mod` 2))
 padZeros cnt str = take pad (repeat '0') ++ str
   where
     pad = max 0 (cnt - length str)
+
+-- Пример за `let in`
+vecLen :: Floating a => (a, a) -> a
+vecLen (x, y) = sqrt (x * x + y * y)
+
+normalized :: Floating b => (b, b) -> (b, b)
+normalized v@(x, y) = let l = vecLen v in (x / l, y / l)
 
 -- <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>
 
