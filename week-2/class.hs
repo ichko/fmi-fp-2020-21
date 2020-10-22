@@ -1,5 +1,6 @@
 import System.Environment
 
+-- pattern matching на прости типове
 recipe "luck" = 10
 recipe "skill" = 20
 recipe "concentrated power of will" = 15
@@ -11,11 +12,15 @@ a 0 = 0
 a 1 = 1
 a n = (a (n - 1) + a (n - 2)) / 2
 
+-- pattern matching във вложена ф-я
+
 fib n =
   iter 0 1 n
   where
     iter a _ 0 = a
     iter a b cnt = iter b (a + b) (cnt - 1)
+
+-- pattern matching на листи
 
 sum' [] = 0
 sum' (h : t) = h + sum' t
@@ -40,6 +45,8 @@ elemIndex a l = iter a l 0
 
 movingWindow _ [] = []
 movingWindow size l@(_ : t) = take size l : movingWindow size t
+
+-- pattern matching на кортежи
 
 fst' (a, _) = a
 
