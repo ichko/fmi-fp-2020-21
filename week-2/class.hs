@@ -1,6 +1,5 @@
-import System.Environment
-
--- F arg
+-- гардове
+-- func arg
 --   | <boolean expression> = <нещо>
 --   | <boolean expression 2> = <нещо друго>
 --   | otherwise = <нещо трето>
@@ -22,7 +21,7 @@ recipe _ = 0
 category m h
   | bmi < 10 = "Хапвай повечко"
   | bmi < 20 = "Екстра си"
-  | otherwise = "По полека с дюнерите"
+  | otherwise = "По-полека с дюнерите"
   where
     bmi = m / h ^ 2
 
@@ -61,14 +60,6 @@ elem' a (h : t) = a == h || a `elem'` t
 -- vs
 -- elem' 10000000 [1..]
 
-elemIndex a l = iter a l 0
-  where
-    iter _ [] _ = -1
-    iter a (h : t) idx = if a == h then idx else iter a t (idx + 1)
-
-movingWindow _ [] = []
-movingWindow size l@(_ : t) = take size l : movingWindow size t
-
 -- pattern matching на кортежи
 
 fst' (a, _) = a
@@ -77,14 +68,11 @@ snd' (_, b) = b
 
 addVec (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
-distVec (x1, y1) (x2, y2) = ()
-
-toBinary 0 = "0"
-toBinary n = toBinary (n `div` 2) ++ (show (n `mod` 2))
-
-padZeros cnt str = take pad (repeat '0') ++ str
-  where
-    pad = max 0 (cnt - length str)
+-- пример за let in
+distVec (x1, y1) (x2, y2) =
+  let dx = x1 - x2
+      dy = y1 - y2
+   in (dx ^ 2 + dy ^ 2)
 
 -- Пример за `let in`
 vecLen :: Floating a => (a, a) -> a
@@ -92,43 +80,3 @@ vecLen (x, y) = sqrt (x * x + y * y)
 
 normalized :: Floating b => (b, b) -> (b, b)
 normalized v@(x, y) = let l = vecLen v in (x / l, y / l)
-
--- <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>
-
-elementaryCA initialState ruleNum = loop initialState
-  where
-    numToRule num = padZeros 8 (toBinary num)
-
-    nextCellState state rule = rule !! ruleId
-      where
-        ruleId = elemIndex state ["111", "110", "101", "100", "011", "010", "001", "000"]
-
-    getCellStates state = init $ init $ movingWindow 3 state
-
-    nextGridState state ruleNum =
-      [ nextCellState cell $ numToRule ruleNum
-        | cell <- getCellStates ('0' : state ++ "0")
-      ]
-
-    loop state = state : loop nextState
-      where
-        nextState = nextGridState state ruleNum
-
-renderCA (state : loop) its
-  | its == 0 = []
-  | otherwise = mapStateToStr state ++ renderCA loop (its - 1)
-  where
-    cmap '0' = "  "
-    cmap '1' = "##"
-
-    mapStateToStr state = concat [cmap c | c <- state] ++ ['\n']
-
-runExampleCA numRule its =
-  renderCA (elementaryCA state numRule) its
-  where
-    state = "000000000000000000000000000000000000000001000000000000000000000000000000000"
-
-main = do
-  args <- getArgs
-  let (numRule : its : []) = [read a :: Int | a <- args]
-  putStr $ runExampleCA numRule its
