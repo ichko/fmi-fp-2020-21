@@ -25,7 +25,8 @@
 
 - Седмица 2 - **За типовете (Typeclasses). Pattern matching. Where, Let in, Case.**
 
-  - Запис
+  - [Запис - първи час](https://drive.google.com/file/d/1HMLcyFXpNdqQ-f2H1zmqyYOmTWdnDRQY/view?usp=sharing)
+  - [Запис - втори час](https://drive.google.com/file/d/155eCHz70Tt62x_RMVVJXtATF6cY58cD3/view?usp=sharing)
   - [Материали](./week-2)
 
 - Седмица 3 - **Функции от по висок ред. Currying. Ламбда функции. Map, filter. Всякакви видове fold. Извикване на ф-я с \$. Композиция на функции.**
