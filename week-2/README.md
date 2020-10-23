@@ -39,6 +39,21 @@
 
 #### Гардове, къде?
 
+```hs
+-- Фибоначи с where
+fib n =
+  iter 0 1 n
+  where
+    iter a _ 0 = a
+    iter a b cnt = iter b (a + b) (cnt - 1)
+
+-- Фибоначи с гард
+fibGuard n
+  | n == 0 = 0
+  | n == 1 = 1
+  | otherwise = fibGuard (n - 1) + fibGuard (n - 2)
+```
+
 ### Типове
 
 `:t` инспектиране на тип в `GHCi`.

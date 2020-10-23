@@ -1,5 +1,16 @@
 import System.Environment
 
+-- F arg
+--   | <boolean expression> = <нещо>
+--   | <boolean expression 2> = <нещо друго>
+--   | otherwise = <нещо трето>
+
+isSorted [] = True
+isSorted (_ : []) = True
+isSorted (a : b : t) = a < b && isSorted (b : t)
+
+sndVec v1 v2 = (fst v1 + fst v2, snd v2 + snd v2)
+
 -- pattern matching на прости типове
 recipe "luck" = 10
 recipe "skill" = 20
@@ -8,17 +19,29 @@ recipe "pleasure" = 5
 recipe "pain" = 50
 recipe _ = 0
 
+category m h
+  | bmi < 10 = "Хапвай повечко"
+  | bmi < 20 = "Екстра си"
+  | otherwise = "По полека с дюнерите"
+  where
+    bmi = m / h ^ 2
+
 a 0 = 0
 a 1 = 1
 a n = (a (n - 1) + a (n - 2)) / 2
 
 -- pattern matching във вложена ф-я
-
 fib n =
   iter 0 1 n
   where
     iter a _ 0 = a
     iter a b cnt = iter b (a + b) (cnt - 1)
+
+-- Фибоначи с гард
+fibGuard n
+  | n == 0 = 0
+  | n == 1 = 1
+  | otherwise = fibGuard (n - 1) + fibGuard (n - 2)
 
 -- pattern matching на листи
 
