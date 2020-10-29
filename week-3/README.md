@@ -14,9 +14,9 @@
 
   ```hs
   case expression of pattern -> result
-                    pattern -> result
-                    pattern -> result
-                    ...
+                     pattern -> result
+                     pattern -> result
+                     ...
   ```
 
   Пример
@@ -43,7 +43,34 @@
 -- file.hs
 main = putStr "Hello world!"
 
-> ghci file.hs
+> ghc file.hs
+> ./file
+```
+
+### Типови псевдоними
+
+Дават ни начин да зададем специфично име на определен тип (може да се използва за задаване на семантично по-подходящи типове)
+
+```hs
+type Name = String
+
+type StudentIdentifier = Int
+
+type Vector = (Double, Double, Double)
+
+type IntToInt = Int -> Int
+```
+
+Полиморфни типови псевдоними
+
+```hs
+type Vector а = (а, а, а)
+
+type Function a = a -> a
+
+type BinaryFunction a b c = a -> b -> c
+
+type Predicate a = a -> Bool
 ```
 
 ### Композиция и прилагане на функции
@@ -182,8 +209,6 @@ main = putStr "Hello world!"
 
   (~∫) :: (Double, Double) -> (Double -> Double) -> Double
   (~∫) = integrate 1e-4
-
-  inf =
 
   > (0, pi) ~∫ sin
   1.999999997939027

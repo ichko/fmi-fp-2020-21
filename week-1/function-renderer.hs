@@ -47,16 +47,16 @@ saveRender t =
 printRender :: (RealFrac b, Enum b, Floating b) => b -> IO ()
 printRender t =
   let canvas = render $ shadeGrid (grid (func t) 0.05) defaultCmap
-      _ = canvas `deepseq` ()
-   in putStrLn canvas
+   in canvas `deepseq` putStrLn canvas
 
 clear :: IO ()
-clear = putStr "\ESC[2J"
+clear = putStr "\ESC[42A\ESC[42D"
 
 loop :: (RealFrac t, Enum t, Floating t) => t -> IO b
 loop t = do
-  saveRender t
-  threadDelay 1000000
+  clear
+  printRender t
+  threadDelay 1000
   loop (t + 1)
 
 main :: IO b
