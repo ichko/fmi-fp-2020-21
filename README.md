@@ -20,20 +20,20 @@
 
 - Седмица 1 - **Функционален стил. Интро в Хаскел.**
 
-  - :movie_camera: [Запис](https://drive.google.com/file/d/1_oZFATqP4YQynCPb4CVnq1P78d9nQ7oT/view?usp=sharing)
+  - 🎥 [Запис](https://drive.google.com/file/d/1_oZFATqP4YQynCPb4CVnq1P78d9nQ7oT/view?usp=sharing)
   - :scroll: [Материали](./week-1)
 
-- Седмица 2 - **За типовете (Typeclasses). Pattern matching. Where, Let in, Case.**
+- Седмица 2 - **Pattern matching. Where, Let in, Case.**
 
-  - :movie_camera: [Запис - първи час](https://drive.google.com/file/d/1HMLcyFXpNdqQ-f2H1zmqyYOmTWdnDRQY/view?usp=sharing)
-  - :movie_camera: [Запис - втори час](https://drive.google.com/file/d/155eCHz70Tt62x_RMVVJXtATF6cY58cD3/view?usp=sharing)
-  - :scroll: [Материали](./week-2)
-  - :star: **[Бонус задачка - Mandelbrot](https://github.com/ichko/fmi-fp-2020-21/issues/1)**
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1HMLcyFXpNdqQ-f2H1zmqyYOmTWdnDRQY/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/155eCHz70Tt62x_RMVVJXtATF6cY58cD3/view?usp=sharing)
+  - 📜 [Материали](./week-2)
+  - 🌟 **[Бонус задачка - Mandelbrot](https://github.com/ichko/fmi-fp-2020-21/issues/1)**
 
 - Седмица 3 - **Функции от по висок ред. Currying. Ламбда функции. Map, filter. Всякакви видове fold. Извикване на ф-я с \$. Композиция на функции.**
 
-  - Запис
-  - [Материали](./week-3)
+  - 🎥 Запис
+  - 📜 [Материали](./week-3)
 
 - Седмица 4 - **Рекурсия. Линейна рекурсия, линеен итеративен процес. Дървовидна рекурсия.**
 

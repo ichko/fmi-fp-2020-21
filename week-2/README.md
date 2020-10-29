@@ -1,4 +1,4 @@
-# Седмица 2 - За типовете (Typeclasses). Pattern matching. Where, Let in, Case.
+# Седмица 2 - Pattern matching. Гардове, Where, Let in, Case.
 
 ![Клетъчен автомат - правило 110](../assets/110.png)
 
