@@ -19,10 +19,9 @@
 
   > We usually surround them by parentheses, because otherwise they extend all the way to the right.
 
-  - Синтаксис `\param1, param2, ... -> <израз>`
-  - Отделяме аргументите със запетая.
+  - Синтаксис `\param1 param2, ... -> <израз>`
   - Не може да се викат рекурсивно.
-  - Можем да pattern-match-ваме аргументите както в нормални функции.
+  - Можем да деструкторираме аргументите както в нормални функции.
 
   **Примери:**
 
@@ -39,7 +38,7 @@
   zipWith' (+) [1..30] [30..64]
   ```
 
-  **Пример с интериращата функция която написахме по-горе**
+  **Пример с интериращата функция която написахме предния път**
 
   ```hs
   inf :: Double
@@ -148,7 +147,48 @@
 
 ### Дефиниране на типове
 
-...
+Виповете - множества от стойности.
+
+#### Алгебрични дата типове
+
+- `data TypeName [typeParam] = [TypeConstructor [typeParam] |]`
+
+  - От дясно на равното стоят типови конструктори - функции които връщат стойности от определен тип.
+  - От ляво на равното стои името на типа (+- някой типов параметър)
+
+  ```hs
+  data Bool = False | True
+
+  data Shape = Circle Float Float Float | Rectangle Float Float Float Float
+  ```
+
+- Да дефинираме ф-я `surface`
+
+- `deriving` синтаксис
+
+  ```hs
+  data Shape = Circle Float Float Float | Rectangle Float Float Float Float deriving (Show)
+  ```
+
+#### Рекурсивни типове и типове с параметри
+
+- виж дефиницията на `List'` в упр-то.
+
+- Пример с `BST`
+  - Да инсъртваме в него
+  - Да търсим в него
+
+#### Record syntax
+
+```hs
+data Student' = Student'
+  { firstName :: String,
+    lastName :: String,
+    facultyNumber :: Int,
+    bio :: String
+  }
+  deriving (Show)
+```
 
 ## Задачи
 
