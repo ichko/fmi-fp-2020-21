@@ -1,3 +1,24 @@
+data Shape
+    = Circle Float Float Float
+    | Rectangle Float Float Float Float
+    deriving (Show, Eq)
+
+surface :: Shape -> Float
+surface (Circle _ _ r) = pi * r ^ 2
+surface (Rectangle x1 y1 x2 y2) = (x1 - x2) * (y1 - y2)
+
+
+data KV k v = KV [(k, v)]
+
+lookup' :: Eq k => KV k v -> k -> Maybe v
+lookup' (KV []) _ = Nothing
+lookup' (KV ((k, v) : t)) key
+ | key == k = Just v
+ | otherwise = lookup' (KV t) key
+
+circumference :: Float -> Float
+circumference r = 2 * pi * r
+
 -- ламбди
 value :: [Integer]
 value = map (\(a, b) -> a + b) [(1, 2), (3, 4), (5, 6)]
@@ -36,7 +57,7 @@ instance Enum Bool' where
 
 -- Let's implement our own list
 
-data List a = Empty | Cons a (List a) deriving (Show, Eq, Read)
+data List a = Empty | Cons a (List a) deriving (Show, Eq)
 
 (<++>) :: List a -> List a -> List a
 Empty <++> other = other
@@ -47,7 +68,7 @@ catList = Cons 1 . Cons 2 . Cons 3 $ Empty <++> (Cons 4 . Cons 5 $ Empty)
 
 infixr 5 :-:
 
-data List' a = E | a :-: (List' a) deriving (Show, Read, Eq)
+data List' a = E | a :-: (List' a) deriving (Show, Eq)
 
 list' :: List' Integer
 list' = 1 :-: 2 :-: 3 :-: E
