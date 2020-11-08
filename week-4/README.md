@@ -220,27 +220,27 @@ data Student' = Student'
 6. Имплементирайте ф-я `elemBST el tree`, която проверява дали елемент е част от даденото дърво, предполагайки че дървото е двоично дърво за търсене, т.е. изпълнява [BS свойството](https://en.wikipedia.org/wiki/Binary_search_tree#Definition).
 7. Докажете че `BinTree` е `showable` по начина показан в примера. По-не-фенси казано - имплементирайте типовия клас `Show` за `BinTree`. (може да предположите че елементите на дървото са едносимволни)
 
-  Пример:
-  ```hs
-  t = BinTree 1
-        (BinTree 2 (BinTree 4 EmptyTree EmptyTree) EmptyTree)
-        (BinTree 3
-          (BinTree 5 (BinTree 7 EmptyTree EmptyTree) EmptyTree)
-          (BinTree 6 EmptyTree EmptyTree))
-   print t
-   >  1
-      |-2
-      | |-4
-      | | |-x
-      | | |-x
-      | |-x
-      |-3
-        |-5
-        | |-7
+    Пример:
+    ```hs
+    t = BinTree 1
+          (BinTree 2 (BinTree 4 EmptyTree EmptyTree) EmptyTree)
+          (BinTree 3
+            (BinTree 5 (BinTree 7 EmptyTree EmptyTree) EmptyTree)
+            (BinTree 6 EmptyTree EmptyTree))
+    print t
+    >  1
+        |-2
+        | |-4
         | | |-x
         | | |-x
         | |-x
-        |-6
-          |-x
-          |-x
-  ```
+        |-3
+          |-5
+          | |-7
+          | | |-x
+          | | |-x
+          | |-x
+          |-6
+            |-x
+            |-x
+    ```
