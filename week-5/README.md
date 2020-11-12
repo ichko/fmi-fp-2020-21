@@ -39,5 +39,57 @@ data Student' = Student'
 
 > A Haskell module is a collection of related functions, types and typeclasses.
 
+Синтаксис `import <module name>`
+
+**Пример:**
+
+```hs
+import Data.List
+
+numUniques :: (Eq a) => [a] -> Int
+numUniques = length . nub
+```
+
+**Импортиране в GHCi**
+
+```hs
+ghci> :m + Data.List
+
+ghci> :m + Data.List Data.Map Data.Set -- import multiple modules in GHCi
+```
+
+**Селективно импортиране (импортирай само каквото ти трябва)**
+
+```hs
+import Data.List (nub, sort)
+```
+
+**Hiding**
+
+```hs
+import Data.List hiding (nub) -- Import everything but `nub`
+```
+
+**Не пръскай всичко в главния скоуп** (също е начин да се справим с импортиране на ф-ии с имена които вече сме дефинирали)
+
+```hs
+import qualified Data.Map
+
+Data.Map.filter -- refers to the filter in `Data.Map`
+```
+
+но може идентификаторите с които реферираме ф-ии да станат прекалено дълги.
+
+**Именоване на импортиран модул**
+
+```hs
+import qualified Data.Map as M
+
+M.filter -- much better 😌
+```
+
+**[Haskell Hierarchical Libraries](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/)** - Документация на стандартната библиотека (какви модули има и кое къде е).
+
 ## Задачи
+
 <!-- TODO -->

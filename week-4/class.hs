@@ -1,20 +1,19 @@
 data Shape
-    = Circle Float Float Float
-    | Rectangle Float Float Float Float
-    deriving (Show, Eq)
+  = Circle Float Float Float
+  | Rectangle Float Float Float Float
+  deriving (Show, Eq)
 
 surface :: Shape -> Float
 surface (Circle _ _ r) = pi * r ^ 2
 surface (Rectangle x1 y1 x2 y2) = (x1 - x2) * (y1 - y2)
-
 
 data KV k v = KV [(k, v)]
 
 lookup' :: Eq k => KV k v -> k -> Maybe v
 lookup' (KV []) _ = Nothing
 lookup' (KV ((k, v) : t)) key
- | key == k = Just v
- | otherwise = lookup' (KV t) key
+  | key == k = Just v
+  | otherwise = lookup' (KV t) key
 
 circumference :: Float -> Float
 circumference r = 2 * pi * r
