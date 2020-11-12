@@ -2,7 +2,7 @@
 
 ![Tic Tac Toe](../assets/tic-tac-toe.png)
 
-[Recreational Mini-Project of the week](./week-5/TicTacToe)
+[Recreational Mini-Project of the week](./TicTacToe)
 
 ## Материал
 
