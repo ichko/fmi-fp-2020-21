@@ -1,4 +1,4 @@
-# Седмица 4 - Ламбда функции. За типовете (Typeclasses).
+# Седмица 4 - Ламбда функции. За типовете (Typeclasses)
 
 ![Ray tracer](../assets/rt-hs2.gif)
 
