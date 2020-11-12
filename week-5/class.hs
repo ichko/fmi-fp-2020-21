@@ -67,7 +67,8 @@ students =
 passingGrade :: Float
 passingGrade = 4.5
 
--- Find all students with gpa > passingGrade
+-- Find all students with gpa >= passingGrade
 -- DO IN CLASS
--- passingStudents :: [Student]
--- passingStudents = filter (\Student {gpa = gpa} -> gpa > passingGrade) students
+passingStudents :: [Student]
+passingStudents =
+  filter (\s -> gpa s > passingGrade) students
