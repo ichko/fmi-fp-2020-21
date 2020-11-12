@@ -20,5 +20,9 @@ data Student' = Student'
   deriving (Show)
 ```
 
+## Модули
+
+> A Haskell module is a collection of related functions, types and typeclasses.
+
 ## Задачи
 <!-- TODO -->
