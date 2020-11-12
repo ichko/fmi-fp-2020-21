@@ -1,6 +1,8 @@
-# Седмица 5 - Ламбда функции. За типовете (Typeclasses)
+# Седмица 5 - Модули. Зареждане на модули. Вградени модули (Data - Map, List, Set). Писане на модули
 
-<!-- TODO -->
+![Tic Tac Toe](../assets/tic-tac-toe.png)
+
+[Recreational Mini-Project of the week](./week-5/TicTacToe)
 
 ## Материал
 
