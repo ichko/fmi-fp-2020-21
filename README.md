@@ -49,6 +49,7 @@
 
   - 🎥 [Запис](https://drive.google.com/file/d/1byBHWtKPPD_OEVrWcmQszKYrcRw7Lavb/view?usp=sharing)
   - 📜 [Материали](./week-5)
+  - 🌟 **[Бонус задача - Console Function Plotter](https://github.com/ichko/fmi-fp-2020-21/issues/8)**
 
 - Седмица 6 - **I/O операции в Хаскел.**
 
