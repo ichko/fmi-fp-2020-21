@@ -109,7 +109,7 @@ clear :: (Show a1, Show a2) => a2 -> a1 -> [Char]
 clear w h = "\ESC[" ++ show h ++ "A\ESC[" ++ show w ++ "D"
 
 ditheredCmap :: [Char]
-ditheredCmap = reverse "                                           ░░░░░▒▒▒▒▒▓▓▓▓▓███"
+ditheredCmap = " ░▒▓█"
 
 shader t (u, v) = shade
   where
@@ -131,19 +131,19 @@ shader t (u, v) = shade
           d = de pos
           result = dist / max
        in if its == 0 || d < eps
-            then result
+            then its - result ** 2
             else march (its - 1) (dist + d)
 
     shade = march max 0
 
-render screenSize t cmap = showRealGrid mappedGrid cmap
+render screenSize t = showRealGrid mappedGrid
   where
     gridInstance = grid (-1, 1) (-1, 1) screenSize
-    mappedGrid = mapGrid (shader t) gridInstance
+    mappedGrid = mapGrid (min 12 . shader t) gridInstance
 
 loop t = do
   let size = 40
-  putStr $ clear (round $ size) (round $ size)
+  putStr $ clear (round size) (round size)
   putStr $ render (size - 1) (t / 50) ditheredCmap
   threadDelay 10
   loop (t + 1)
