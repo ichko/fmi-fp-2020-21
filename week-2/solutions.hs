@@ -50,7 +50,7 @@ fooBar n
   | otherwise = show n
 
 fooBar100 :: String
-fooBar100 = concat . take 100 $ map ((++ "\n") . fooBar) [1 ..]
+fooBar100 = concatMap ((++ "\n") . fooBar) [1 .. 100]
 
 main :: IO ()
 main = putStrLn fooBar100
