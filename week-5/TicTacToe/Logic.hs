@@ -1,8 +1,10 @@
+{-# LANGUAGE RecordWildCards #-}
+
 module Logic where
 
 import Data.List (transpose)
 import Data.Maybe (isNothing)
-import Types (Board, GameState (..), Player (..), Position)
+import Types
 
 isRowWin :: Board -> Player -> Bool
 isRowWin b p = any (all (== Just p)) b
@@ -27,32 +29,34 @@ nextBoardState board player (x, y) =
     selectedRow = board !! y
     updatedRow = swapListVal x (Just player) selectedRow
 
-applyMove :: GameState -> Position -> GameState
-applyMove Turn {getBoard = board, getPlayer = player} position =
-  Turn
-    { getPlayer = if player == First then Second else First,
-      getBoard = nextBoardState board player position
+applyMove :: Game -> Position -> Game
+applyMove Game {..} position =
+  Game
+    { player = if player == First then Second else First,
+      board = nextBoardState board player position,
+      state = state
     }
 
 isBoardFull :: Board -> Bool
 isBoardFull = not . any isNothing . concat
 
-maybeNextGameState :: GameState -> Position -> Maybe GameState
-maybeNextGameState g@GameOver {} _ = Just g
-maybeNextGameState t@Turn {getBoard = board} position
+maybeUpdateGame :: Game -> Position -> Maybe Game
+maybeUpdateGame g@Game {state = GameOver _} _ = Just g
+maybeUpdateGame g@Game {..} position
   | not $ isValidPosition board position = Nothing
   | isWinState nextBoard First = gameOver $ Just First
   | isWinState nextBoard Second = gameOver $ Just Second
   | isBoardFull nextBoard = gameOver Nothing
   | otherwise = Just nextGameState
   where
-    nextGameState@Turn
-      { getBoard = nextBoard
-      } = applyMove t position
+    nextGameState@Game
+      { board = nextBoard
+      } = applyMove g position
 
     gameOver maybePlayer =
       Just
-        GameOver
-          { getWinner = maybePlayer,
-            getBoard = nextBoard
+        Game
+          { player = player,
+            board = nextBoard,
+            state = GameOver maybePlayer
           }

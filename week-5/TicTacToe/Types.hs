@@ -10,12 +10,10 @@ type Board = [[Maybe Player]]
 
 type Position = (Int, Int)
 
-data GameState
-  = GameOver
-      { getWinner :: Maybe Player,
-        getBoard :: Board
-      }
-  | Turn
-      { getPlayer :: Player,
-        getBoard :: Board
-      }
+data GameState = Running | GameOver (Maybe Player)
+
+data Game = Game
+  { player :: Player,
+    board :: Board,
+    state :: GameState
+  }

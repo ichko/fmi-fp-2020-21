@@ -1,12 +1,17 @@
 module Main where
 
-import Logic (maybeNextGameState)
+import Logic (maybeUpdateGame)
 import Rendering (firstTurn, showGame)
 import Text.Read (readMaybe)
-import Types (GameState (..), Player (..), Position)
+import Types
+  ( Game (Game, state),
+    GameState (GameOver),
+    Player (..),
+    Position,
+  )
 
-loop :: GameState -> IO ()
-loop gs@GameOver {} = putStrLn $ showGame gs
+loop :: Game -> IO ()
+loop g@Game {state = GameOver _} = putStrLn $ showGame g
 loop gs = do
   putStrLn $ showGame gs
   move <- getLine
@@ -16,7 +21,7 @@ loop gs = do
           putStrLn "Invalid input, try again"
           loop gs
         Just position ->
-          case maybeNextGameState gs position of
+          case maybeUpdateGame gs position of
             Nothing -> do
               putStrLn "Invalid move, try again"
               loop gs

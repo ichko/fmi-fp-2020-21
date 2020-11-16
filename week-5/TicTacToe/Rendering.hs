@@ -1,7 +1,14 @@
+{-# LANGUAGE NamedFieldPuns #-}
+
 module Rendering where
 
 import Data.List (intersperse)
-import Types (Board, GameState (..), Player (First))
+import Types
+  ( Board,
+    Game (..),
+    GameState (GameOver, Running),
+    Player (First),
+  )
 
 showBoard :: Board -> String
 showBoard b =
@@ -10,8 +17,7 @@ showBoard b =
       | r <- b
     ]
 
-showGame :: GameState -> String
-showGame GameOver {getWinner = winner, getBoard = board} =
+showGame Game {board, state = GameOver winner} =
   showBoard board
     ++ "Game Over!\n"
     ++ label
@@ -19,14 +25,15 @@ showGame GameOver {getWinner = winner, getBoard = board} =
     label = case winner of
       Nothing -> "It's a draw"
       Just player -> "Player " ++ show player ++ " won!"
-showGame Turn {getPlayer = player, getBoard = board} =
+showGame Game {player, board} =
   showBoard board ++ playerLabel
   where
     playerLabel = "Player '" ++ show player ++ "' select your move:"
 
-firstTurn :: GameState
+firstTurn :: Game
 firstTurn =
-  Turn
-    { getPlayer = First,
-      getBoard = replicate 3 $ replicate 3 Nothing
+  Game
+    { player = First,
+      board = replicate 3 $ replicate 3 Nothing,
+      state = Running
     }
