@@ -94,4 +94,4 @@ M.filter -- much better 😌
 
 ## Задачи
 
-<!-- TODO -->
+1.
