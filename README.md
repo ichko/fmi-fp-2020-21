@@ -10,7 +10,10 @@
 
 - 🏫 [Линк към курса в мудъл](https://learn.fmi.uni-sofia.bg/course/view.php?id=6685)
 
-- 🎯 [Линк към описания на проекти](https://docs.google.com/document/d/1nfYOuSN5ss3LKlO60XA2NiUbTV4Dmpsj0zCNxp-MfZ4/edit)
+## 🎯 Проекти
+
+- [Линк към описания на проекти](https://docs.google.com/document/d/1nfYOuSN5ss3LKlO60XA2NiUbTV4Dmpsj0zCNxp-MfZ4/edit)
+- [Полезен ресурс за избор на проект - Build your own X](https://github.com/danistefanovic/build-your-own-x#build-your-own-regex-engine)
 
 ## 📝 Домашни
 
