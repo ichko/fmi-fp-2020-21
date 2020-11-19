@@ -1,13 +1,7 @@
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE TupleSections #-}
 
-data World = World
-
-putStrLn' :: String -> World -> World
-putStrLn' = undefined -- тук се случват някакви магии
-
-getLine' :: World -> (String, World)
-getLine' = undefined -- още магии
+import World (World (..), getLine', putStrLn')
 
 greet :: IO ()
 greet = do
@@ -28,6 +22,9 @@ branch w =
   )
 
 newtype WorldT a = WorldT (World -> (a, World)) deriving (Functor)
+
+instance Show (WorldT a) where
+  show _ = "WorldT"
 
 -- show what is Functor
 -- newtype Box a = Box a deriving (Functor, Show)
@@ -69,4 +66,6 @@ instance Monad WorldT where
 doGreet :: WorldT ()
 doGreet = do
   name <- getLineT
-  putStrLnT name
+  putStrLnT $ "Zdr " ++ name
+
+-- in GHCi: let (WorldT t) = doGreet in t World

@@ -38,7 +38,7 @@ x = 3
 
 ### IO
 
-- Хакел готин защото всичко е чисто, но как да въздействаме на света
+- Хакел е готин защото всичко е чисто, но как да въздействаме на света
   без да имаме възмоност да променяме състояние.
 
   > it has to change the state of an output device (usually the state of the screen), which then emits photons that travel to our brain and change the state of our mind, man
