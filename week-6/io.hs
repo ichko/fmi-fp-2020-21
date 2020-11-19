@@ -17,8 +17,8 @@ greet' =
 -- bad
 branch :: World -> (World, World)
 branch w =
-  ( putStrLn' "I love" w,
-    putStrLn' "I hate" w
+  ( putStrLn' "haskell is life" w,
+    putStrLn' "haskell sucks" w
   )
 
 newtype WorldT a = WorldT (World -> (a, World)) deriving (Functor)
