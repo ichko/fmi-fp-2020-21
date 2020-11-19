@@ -8,19 +8,22 @@ greet = do
   name <- getLine
   putStrLn name
 
-greet' :: World
-greet' =
-  let w1 = World
-      (name, w2) = getLine' w1
+greet' :: World -> World
+greet' w =
+  let (name, w2) = getLine' w
    in putStrLn' name w2
 
 -- bad
 branch :: World -> (World, World)
 branch w =
   ( putStrLn' "haskell is life" w,
-    putStrLn' "haskell sucks" w
+    putStrLn' "haskell su" w
   )
 
+-- това е като data ама работи само за типове с
+-- един конструктор с едно поле
+-- казва на компилатора че може да третира новия тип и типа на полето в
+-- конструктора по един и същи начин
 newtype WorldT a = WorldT (World -> (a, World)) deriving (Functor)
 
 instance Show (WorldT a) where

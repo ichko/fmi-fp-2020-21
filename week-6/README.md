@@ -6,6 +6,8 @@
 
 ## Материал
 
+- Сложете си [haskell-linter](https://marketplace.visualstudio.com/items?itemName=hoovercj.haskell-linter) ако пишете на VSCode
+
 ### Какво правихме предния път
 
 - модули - начин да си структорираме кода във файлове
@@ -37,6 +39,8 @@ x = 3
 > - [Georgi Lubenov @googleson78#6163](https://github.com/googleson78)
 
 ### IO
+
+_30мин за IO като нещо което променя света_
 
 Голяма част от примерите са любезно откраднати от - [Learn You a Haskell for Great Good - Input and Output](http://learnyouahaskell.com/input-and-output)
 

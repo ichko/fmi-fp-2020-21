@@ -28,7 +28,6 @@ mainRepl = do
   if null line
     then return ()
     else do
-      -- notice the indentation (it is important)
       putStrLn $ doPureWork line
       mainRepl
 

@@ -56,8 +56,7 @@
 
 - Седмица 6 - **I/O операции в Хаскел.**
 
-  - 🎥 [Запис - първи час](#)
-  - 🎥 [Запис - втори час](#)
+  - 🎥 [Запис](https://drive.google.com/file/d/1GyEOSxWnB84cqSK1x35j-Enz2QakIYog/view?usp=sharing)
   - 📜 [Материали](./week-6)
 
 - Седмица 7 - **Data, Type, Typeclass.**
