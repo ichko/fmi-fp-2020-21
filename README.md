@@ -82,10 +82,11 @@
 
 - Седмица 10 - **Конкурентно програмиране (Control.Parallel).**
 
-## 🔗 Релеватни хранилища
+## 🔗 Релеватни ресурси
 
+- **[Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems) 💯**
 - [FP-2020-21](https://github.com/semerdzhiev/fp-2020-21) - Редовен курс 2020-21
-- [Функционално Програмиране - Практикум 2019](https://github.com/triffon/fp-2019-20/tree/master/exercises/lab)
+- [Функционално Програмиране](https://github.com/triffon/fp-2019-20/tree/master/exercises/lab) - Практикум 2019
 - [FP1819](https://github.com/ekaranasuf/fp1819) - от Еси
 - [FP-Elective-2017](https://github.com/fmi-lab/fp-elective-2017) - от Тонката
 - [FMI-Functional-Programming-2016](https://github.com/6desislava6/FMI-Functional-Programming-2016) - от Деси
