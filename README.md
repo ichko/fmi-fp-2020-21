@@ -72,7 +72,8 @@
 
 - Седмица 7 - **I/O операции част 2.**
 
-  - 🎥 [Запис](#/_)
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1vxtWaKXabMlN7HLhK5t7_x7byKKKNG2e/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/1OrwLl3EzUY4E7gCdMIGYNSXMSs6tsFPK/view?usp=sharing)
   - 📜 [Материали](./week-7)
 
 - Седмица 8 - **Функтори, Моноиди, Монади, Error handling.**

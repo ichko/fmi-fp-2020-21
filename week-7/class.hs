@@ -1,11 +1,49 @@
-import Control.Monad (forM, forever)
+import Control.Monad (forM, forM_, forever, when)
 
--- forever
-mainMultiplyForever :: IO b
-mainMultiplyForever = forever $ do
+main' :: IO ()
+main' = do
   a <- getLine
   b <- getLine
-  print $ "Ans: " ++ show (read a * read b)
+  print [a, b]
+
+main'' :: IO ()
+main'' = do
+  res <- sequence [getLine, getLine]
+  print res
+
+mainMap :: IO ()
+mainMap = do
+  mapM_ print [1, 2, 3]
+
+mainFor :: IO ()
+mainFor = do
+  forM_ [1, 2, 3] $ \i -> do
+    print i
+
+    line <- getLine
+
+    print (read line + i)
+
+mainWhen :: IO ()
+mainWhen = do
+  line <- getLine
+
+  when (length line < 2) $ do
+    putStrLn "in the when 'block'"
+    test <- getLine
+    putStrLn test
+
+  putStrLn "After when block"
+
+-- forever
+mainMultiplyForever :: IO ()
+mainMultiplyForever = do
+  forever $ do
+    a <- getLine
+    b <- getLine
+    print $ "Ans: " ++ show (read a * read b)
+
+  putStr "test"
 
 mainForM :: IO ()
 mainForM = do
