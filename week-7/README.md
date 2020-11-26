@@ -10,7 +10,7 @@
   тип `World`
 - Направихме го да работи с `do`, като доказахме на хаскел, че е монада
 
-### IO Функции и задачки
+### IO Функции
 
 - `putStr`
 
@@ -76,6 +76,36 @@
 - `readFile :: FilePath -> IO String` - чете
 
 - `writeFile :: FilePath -> String -> IO ()` - пише
+
+### Да решим малко задачи
+
+- [Reverse Polish notation calculator](http://learnyouahaskell.com/functionally-solving-problems#reverse-polish-notation-calculator)
+
+  - [RPN Wikipedia](https://en.wikipedia.org/wiki/Reverse_Polish_notation)
+
+  - Infix expression - `10 4 3 + 2 * -`
+
+  - Как работи?
+
+    > Well, think of a stack. You go over the expression from left to right. Every time a number is encountered, push it on to the stack. When we encounter an operator, take the two numbers that are on top of the stack (we also say that we pop them), use the operator and those two and then push the resulting number back onto the stack. When you reach the end of the expression, you should be left with a single number if the expression was well-formed and that number represents the result.
+
+  - Да прочетем Expression от файл `input` и да запишем резултата във файл `output`.
+
+- Асоциативни списъци и графи (откраднати от [тук](https://github.com/ekaranasuf/fp1819/tree/master/week8#%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8) - мс Еси)
+
+  - Да дефинираме ф-я `mapValues mapper assocList`, която прилага `mapper` в/у всяка стойност на assocList
+
+  - Дефинирайте функция `extendWith assocList1 assocList2`, която връща асоциативен списък, съдържащ всички ключове на `assocList1` и `assocList2`. Ако някой ключ се повтаря, взема този от `assocList2`
+
+  - Дефинирайте базовите функция `vertices graph`, `children graph vertex` и `hasEdge graph u v`
+
+  - Дефинирайте функция `parents graph vertex`, която намира родителите на даден връх в граф
+
+  - Дефинирайте функция `invert graph`, която връща нова граф, получен от `graph` като "обърнем" всички ребра в него
+
+  - Дефинирайте функция `containsPath graph path`, която проверява дали пътят `path` се съдържа в подадения граф
+
+  - Дефинирайте функция `symmetric graph`, която проверява дали дадения граф е симетричен (ако съществува ребро от връх `u` до `v`, то същвстува и ребро от `v` до `u`)
 
 ## Задачи
 
