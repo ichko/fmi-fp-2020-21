@@ -40,7 +40,10 @@ x = 3
 
 ### IO
 
-_30мин за IO като нещо което променя света_
+_30мин за IO като нещо което променя света - разгледай файла `io.hs`_
+
+> SRC - [YoyTube] What is IO monad?
+> <https://www.youtube.com/watch?v=fCoQb-zqYDI>
 
 Голяма част от примерите са любезно откраднати от - [Learn You a Haskell for Great Good - Input and Output](http://learnyouahaskell.com/input-and-output)
 
@@ -98,73 +101,6 @@ _30мин за IO като нещо което променя света_
   - какво прави тогава? - опакова стойност в `IO`
 
 - Пример за чейннат `main` без `do`
-
-### IO Функции
-
-- `putStr`
-
-- `putChar`
-
-  как имплементираме `putStr`, рекурсивно
-
-  ```hs
-  putStr :: String -> IO ()
-  putStr [] = return ()
-  putStr (x:xs) = do
-      putChar x
-      putStr xs
-  ```
-
-- `print = putStrLn . show`
-
-- `when` в `import Control.Monad`
-
-  ```hs
-  import Control.Monad
-
-  main = do
-      c <- getChar
-      when (c /= ' ') $ do
-          putChar c
-          main
-  ```
-
-- `sequence :: [IO a] -> IO [a]` - взима няколко действия, изпълнява ги и ни връща резултатите им.
-
-  ```hs
-  main = do
-      a <- getLine
-      b <- putStr "test"
-      print [a,b]
-
-  -- ==
-
-  main = do
-    seq = sequence [getLine, putStr "test"]
-    print seq
-  ```
-
-- `mapM` and `mapM_` - sequence-ва колекция от монади до монада от колекция
-
-  ```hs
-  mapM print [1,2,3]
-  -- vs
-  mapM_ print [1,2,3]
-  ```
-
-- `forever` - чейнва IO action със себе си forever
-
-- `forM = flip mapM` - дава ни готин синтаксис
-
-- `getContents` - чете от stdin докато не срещне `end-of-file`
-
-- `interact :: (String -> String) -> IO ()` - чете вход, дава хо на обработващата чиста ф-я и принт-ва резултата.
-
-#### Рабта с файлове
-
-- `readFile :: FilePath -> IO String` - чете
-
-- `writeFile :: FilePath -> String -> IO ()` - пише
 
 По-детайлно може да разгледате [тук](http://learnyouahaskell.com/input-and-output#files-and-streams)
 
