@@ -3,7 +3,6 @@ import Lib (Move (..), play)
 import Test.HUnit
   ( Counts,
     Test (..),
-    assertEqual,
     runTestTT,
   )
 

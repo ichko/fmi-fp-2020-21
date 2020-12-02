@@ -95,11 +95,11 @@
 
 Асоциативни списъци и графи (откраднати от [тук](https://github.com/ekaranasuf/fp1819/tree/master/week8#%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8) - мс Еси)
 
-1. Да дефинираме ф-я `mapValues mapper assocList`, която прилага `mapper` в/у всяка стойност на assocList
+1. Да дефинираме ф-я `mapValues mapper assocList`, която прилага `mapper` в/у всяка стойност на `assocList`.
 
 2. Дефинирайте функция `extendWith assocList1 assocList2`, която връща асоциативен списък, съдържащ всички ключове на `assocList1` и `assocList2`. Ако някой ключ се повтаря, взема този от `assocList2`
 
-3. Дефинирайте базовите функция `vertices graph`, `children graph vertex` и `hasEdge graph u v`
+3. Дефинирайте базовите функция `vertices graph`, `children graph vertex` и `hasEdge (u, v) graph`
 
 4. Дефинирайте функция `parents graph vertex`, която намира родителите на даден връх в граф
 
