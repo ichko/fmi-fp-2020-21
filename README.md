@@ -15,6 +15,7 @@
 
 - [Линк към описания на проекти](https://docs.google.com/document/d/1nfYOuSN5ss3LKlO60XA2NiUbTV4Dmpsj0zCNxp-MfZ4/edit)
 - [Полезен ресурс за избор на проект - Build your own X](https://github.com/danistefanovic/build-your-own-x)
+- [Предаване на проект](https://github.com/ichko/fmi-fp-2020-21/issues/10)
 
 ## 📝 Домашни
 
@@ -66,7 +67,7 @@
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1OrwLl3EzUY4E7gCdMIGYNSXMSs6tsFPK/view?usp=sharing)
   - 📜 [Материали](./week-7)
 
-- Седмица 8/9 - **Функтор, апликатив, монада и още** - (_03.12.2020_ / _10.12.2020_)
+- Седмица 8/9 - **Функтор, апликатив, монада и още. Парсъри** - (_03.12.2020_ / _10.12.2020_)
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1rStlRDp70pmc2uMqHtRobgNqPQ-mySmm/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/11jK-Vbd519_WVz4hqrg_tLnYVDU0223P/view?usp=sharing)
