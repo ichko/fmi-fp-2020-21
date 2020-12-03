@@ -1,4 +1,4 @@
-# Седмица 1 - Функционален стил. Интро в Хаскел
+# Седмица 1 - Функционален стил и интро в Хаскел
 
 ![The problem with Haskell is that it's a language built on lazy evaluation and nobody's actually called for it.](https://imgs.xkcd.com/comics/haskell.png)
 
