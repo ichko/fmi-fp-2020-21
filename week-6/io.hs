@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE TupleSections #-}
 
--- SRC - [YoyTube] What is IO monad?
+-- SRC - [YouTube] What is IO monad?
 -- https://www.youtube.com/watch?v=fCoQb-zqYDI
 
 import World (World (..), getLine', putStrLn')

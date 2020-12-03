@@ -42,7 +42,7 @@ x = 3
 
 _30мин за IO като нещо което променя света - разгледай файла `io.hs`_
 
-> SRC - [YoyTube] What is IO monad?
+> SRC - [YouTube] What is IO monad?
 > <https://www.youtube.com/watch?v=fCoQb-zqYDI>
 
 Голяма част от примерите са любезно откраднати от - [Learn You a Haskell for Great Good - Input and Output](http://learnyouahaskell.com/input-and-output)

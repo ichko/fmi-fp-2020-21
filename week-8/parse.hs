@@ -131,3 +131,4 @@ main = do
       "[ True,   False , False  ] test"
 
   print $ runParser parseIntegerArray' "[ [12],  [ 54 , 23]  ]dsa"
+  print $ runParser parseIntegerArray' "[ [12],  [ 54 , [23]  ]dsa"
