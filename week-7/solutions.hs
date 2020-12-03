@@ -56,7 +56,8 @@ vertices :: Graph b -> [b]
 vertices = map fst . associations
 
 children :: Eq a => a -> Graph a -> [a]
-children a Graph {..} = fromMaybe [] $ lookup a associations
+children a Graph {..} =
+  fromMaybe [] $ lookup a associations
 
 hasEdge :: Eq a => Pair a a -> Graph a -> Bool
 hasEdge (u, v) g = v `elem` children u g
