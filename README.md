@@ -21,7 +21,7 @@
 
 - [Първо домашно](https://docs.google.com/document/d/1Z6N1EYgBlo5_c2YzXGf0yVfTO4O8fzN4xOrFBxtsQDY/edit?usp=sharing)
 
-- Второ домашно
+- [Второ домашно](https://github.com/ichko/fmi-fp-2020-21/tree/main/hw/2)
 
 ## 🚩 Програма
 
