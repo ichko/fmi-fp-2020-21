@@ -67,10 +67,14 @@
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1OrwLl3EzUY4E7gCdMIGYNSXMSs6tsFPK/view?usp=sharing)
   - 📜 [Материали](./week-7)
 
-- Седмица 8/9 - **Функтор, апликатив, монада и още. Парсъри** - (_03.12.2020_ / _10.12.2020_)
+- Седмица 8/9 - **Функтор, апликатив, монада и още. Парсъри**
 
-  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1rStlRDp70pmc2uMqHtRobgNqPQ-mySmm/view?usp=sharing)
-  - 🎥 [Запис - втори час](https://drive.google.com/file/d/11jK-Vbd519_WVz4hqrg_tLnYVDU0223P/view?usp=sharing)
+  - Седмица 8 - **Решаване на задачи** - _03.12.2020_
+    - 🎥 [Запис - първи час](https://drive.google.com/file/d/1rStlRDp70pmc2uMqHtRobgNqPQ-mySmm/view?usp=sharing)
+    - 🎥 [Запис - втори час](https://drive.google.com/file/d/11jK-Vbd519_WVz4hqrg_tLnYVDU0223P/view?usp=sharing)
+  - Седмица 9 - **Парсъри** - _10.12.2020_
+    - 🎥 [Запис - първи час](https://drive.google.com/file/d/1oUcAWlY7Q-snbYtXnR1s0lFrTJLlCe9m/view?usp=sharing)
+    - 🎥 [Запис - втори час](https://drive.google.com/file/d/14XiQTST0gmsbiqdU8CfL-TcebdU6Q50f/view?usp=sharing)
   - 📜 [Материали](./week-8-9)
   - 🌟 **[Бонус задача - JsonParser](https://github.com/ichko/fmi-fp-2020-21/issues/9)**
 
