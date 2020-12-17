@@ -1,5 +1,8 @@
 {-# LANGUAGE LambdaCase #-}
 
+import Control.Applicative
+import Data.Char
+
 -- Какво е парсър
 -- Как хендълваме грешки
 -- да изядем един символ
@@ -58,5 +61,55 @@ instance Monad Parser where
 
 stringP :: String -> Parser String
 stringP = mapM charP
+
+instance Alternative Parser where
+  empty = Parser $ \_ -> Left "empty parser"
+  (Parser pa) <|> (Parser pb) = Parser $ \i ->
+    case pa i of
+      Left error -> pb i
+      result -> result
+
+trueParser :: Parser Bool
+trueParser = True <$ stringP "true"
+
+falseParser :: Parser Bool
+falseParser = False <$ stringP "false"
+
+boolP :: Parser Bool
+boolP = trueParser <|> falseParser
+
+tryRead :: (Read a) => Parser String -> Parser a
+tryRead (Parser ps) = Parser $ \i -> do
+  (rest, str) <- ps i
+  case reads str of
+    [] -> Left "could not read parsed string value"
+    [(a, _)] -> Right (rest, a)
+
+spanP :: (Char -> Bool) -> Parser String
+spanP predicate = Parser $ \i ->
+  let (matched, rest) = span predicate i
+  in Right (rest, matched)
+
+integerP :: Parser Integer
+integerP = tryRead $ spanP isDigit
+
+wsP :: Parser String
+wsP = spanP isSpace
+
+exampleP =
+  (\_ _ a _ _ _ b _ _ -> (a, b))
+  <$> charP '('
+  <*> wsP 
+  <*> integerP
+  <*> wsP
+  <*> charP ','
+  <*> wsP
+  <*> integerP
+  <*> wsP
+  <*> charP ')'
+
+example =
+  runParser (tryRead $ stringP "123" :: Parser Int) "123 abc"
+
 
 main = undefined
