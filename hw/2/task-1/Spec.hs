@@ -29,15 +29,15 @@ evalSimpleNested = TestCase $ do
 evalSimpleStringBrackets :: Test
 evalSimpleStringBrackets = TestCase $ do
   assertEqual "1" (Just 1) (evaluateString "1")
-  assertEqual "(1+1)" (Just 2) (evaluateString "(1+1)")
+  assertEqual "(1+1)" (Just 2) (evaluateString "(1  +1 )")
   assertEqual
     "((1+1)/(2*3))"
     (Just 0)
-    (evaluateString "((1+1)/(2*3))")
+    (evaluateString "((1+ 1) /( 2*  3) )  ")
   assertEqual
     "(1+(4-(5*(20/3))))"
     (Just (-25))
-    (evaluateString "(1+(4-(5*(20/3))))")
+    (evaluateString "  (1 +(  4-(5 *  (20 /3) ) )) ")
 
 -- Depending on your solution these
 -- tests might take some time to finish
@@ -61,20 +61,20 @@ evalComplexStringBrackets = TestCase $ do
 evalSimpleStringNoBrackets :: Test
 evalSimpleStringNoBrackets = TestCase $ do
   assertEqual "1" (Just 1) (evaluateString "1")
-  assertEqual "1+1" (Just 2) (evaluateString "1+1")
-  assertEqual "(1+1)/2*3" (Just 0) (evaluateString "(1+1)/2*3")
-  assertEqual "1+4-5*20/3" (Just (-25)) (evaluateString "1+4-5*20/3")
+  assertEqual "1+1" (Just 2) (evaluateString "1 +1  ")
+  assertEqual "(1+1)/2*3" (Just 0) (evaluateString "(1   +1) /2  *3 ")
+  assertEqual "1+4-5*20/3" (Just (-25)) (evaluateString " 1+4- 5*20/ 3")
 
 evalComplexStringNoBrackets :: Test
 evalComplexStringNoBrackets = TestCase $ do
   assertEqual
     "(34+32)-44/(8+9*(3+2))-22"
     (Just 44)
-    (evaluateString "(34+32)-44/(8+9*(3+2))-22")
+    (evaluateString "(34+ 32)-44/ (8+9 * (3 +2) )-  22   ")
   assertEqual
     "(2-(2+4+(3-2)))/(2+1)*(2-1)"
     (Just (-2))
-    (evaluateString "(2-(2+4+(3-2)))/(2+1)*(2-1)")
+    (evaluateString "(2-(   2+4+(3-2)))/(2+1)*(2-1  )")
 
 tests :: Test
 tests =
@@ -84,7 +84,7 @@ tests =
       evalSimpleStringBrackets,
       evalComplexStringBrackets
       -- Bonus Tests
-      -- Uncomment to check if you get the new year bonus point 🍾
+      -- Uncomment to check if you get the <new_year_bonus_point_🍾>
       -- evalSimpleStringNoBrackets,
       -- evalComplexStringNoBrackets
     ]
