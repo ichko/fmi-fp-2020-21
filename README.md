@@ -15,7 +15,7 @@
 
 - [Линк към описания на проекти](https://docs.google.com/document/d/1nfYOuSN5ss3LKlO60XA2NiUbTV4Dmpsj0zCNxp-MfZ4/edit)
 - [Полезен ресурс за избор на проект - Build your own X](https://github.com/danistefanovic/build-your-own-x)
-- [Предаване на проект](https://github.com/ichko/fmi-fp-2020-21/issues/10)
+- [Предаване на проект](https://github.com/ichko/fmi-fp-2020-21/discussions/11)
 
 ## 📝 Домашни
 
@@ -79,9 +79,13 @@
   - 📜 [Материали](./week-8-9)
   - 🌟 **[Бонус задача - JsonParser](https://github.com/ichko/fmi-fp-2020-21/issues/9)**
 
-- Седмица 10 - **Пакетна система - Stack** - _17.12.2020_
+- Седмица 10 - **Alternative - продължаваме с парсърите** - _17.12.2020_
 
-- Седмица 11 - **Конкурентно програмиране (Control.Parallel)**
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1uhbd89W5ssLAwN48PyR2mr-KxScg3J3K/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/1I2-C7jkm3nis7DgDhgeOvNn2TnjWx6wp/view?usp=sharing)
+  - 📜 [Материали](./week-8-9) (продължаваме в папка week-8-9)
+
+- Седмица 11 - **Пакетна система - Stack** - _07.01.2020_
 
 ## 🔗 Релеватни ресурси
 

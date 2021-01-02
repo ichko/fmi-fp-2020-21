@@ -4,17 +4,17 @@ import XMLParser
 
 assertXMLFileParse :: String -> Test
 assertXMLFileParse fileName = TestCase $ do
-  expectedContent <- readFile $ "test-files/" ++ fileName ++ ".xml"
-  actualContent <- readFile $ "test-files/" ++ fileName ++ ".obj"
-  let eitherExpected = runParser xmlParser expectedContent
-      readActualContent = reads actualContent :: [(XMLObject, String)]
+  actualContent <- readFile $ "test-files/" ++ fileName ++ ".xml"
+  expectedContent <- readFile $ "test-files/" ++ fileName ++ ".obj"
+  let eitherActual = runParser xmlParser actualContent
+      readExpectedContent = reads expectedContent :: [(XMLObject, String)]
 
-  case eitherExpected of
+  case eitherActual of
     Left message -> error $ show message
-    Right (_, expected) ->
-      case readActualContent of
+    Right (_, actual) ->
+      case readExpectedContent of
         [] -> error $ "could not read actual file " ++ fileName ++ ".obj"
-        [(actual, _)] ->
+        [(expected, _)] ->
           assertEqual
             ("'" ++ fileName ++ "' files should be equal")
             expected

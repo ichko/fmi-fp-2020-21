@@ -11,3 +11,29 @@
 - Задачите се предават в мудъл - [тук](https://learn.fmi.uni-sofia.bg/mod/assign/view.php?id=170892).
 - Всяка една от задачите трябва да отговаря на [тези изисквания](https://github.com/ichko/fmi-fp-2020-21/wiki/%D0%94%D0%BE%D0%B1%D1%80%D0%B8-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8,-%D0%BA%D0%BE%D0%B8%D1%82%D0%BE-%D0%B4%D0%B0-%D1%81%D0%BB%D0%B5%D0%B4%D0%B2%D0%B0%D0%BC%D0%B5!).
 - Всяко решение трябва да е до `100` реда код (не се включват дадените файлове към задачите и тестовете).
+- Тестовете на всяка задача трябва да минават успешно (вижте Spec.hs в папката на всяка задача)
+
+## Как да ръннете тестовете
+
+- Клонирате си репото
+
+```sh
+git clone https://github.com/ichko/fmi-fp-2020-21
+cd fmi-fp-2020-21/hw/2/task-№
+```
+
+- Рънвате спек файла
+
+```sh
+runhaskell Spec.hs
+or
+stack Spec.hs
+```
+
+## Ако нямате `HUnit`
+
+```sh
+cabal install --lib HUnit
+or
+stack install HUnit
+```
