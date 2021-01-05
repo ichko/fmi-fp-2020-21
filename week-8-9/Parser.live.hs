@@ -16,7 +16,7 @@ import Data.Char
 -- парсване на тру или фолс
 -- имплементиране на алтернатива
 
--- парсване на инт - tryRead декоратор
+-- парсване на инт - tryReading декоратор
 -- reads
 
 type ParseError = String
@@ -78,8 +78,8 @@ falseParser = False <$ stringP "false"
 boolP :: Parser Bool
 boolP = trueParser <|> falseParser
 
-tryRead :: (Read a) => Parser String -> Parser a
-tryRead (Parser ps) = Parser $ \i -> do
+tryReading :: (Read a) => Parser String -> Parser a
+tryReading (Parser ps) = Parser $ \i -> do
   (rest, str) <- ps i
   case reads str of
     [] -> Left "could not read parsed string value"
@@ -91,7 +91,7 @@ spanP predicate = Parser $ \i ->
   in Right (rest, matched)
 
 integerP :: Parser Integer
-integerP = tryRead $ spanP isDigit
+integerP = tryReading $ spanP isDigit
 
 wsP :: Parser String
 wsP = spanP isSpace
@@ -109,7 +109,7 @@ exampleP =
   <*> charP ')'
 
 example =
-  runParser (tryRead $ stringP "123" :: Parser Int) "123 abc"
+  runParser (tryReading $ stringP "123" :: Parser Int) "123 abc"
 
 
 main = undefined
