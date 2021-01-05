@@ -4,20 +4,20 @@ import Test.HUnit
 evalNonNested :: Test
 evalNonNested = TestCase $ do
   assertEqual "1" (Just 1) (eval (Atom 1))
-  assertEqual "1+1" (Just 2) (eval $ Add (Atom 1) (Atom 1))
-  assertEqual "5-3" (Just 2) (eval $ Subtr (Atom 5) (Atom 3))
-  assertEqual "2*2" (Just 4) (eval $ Mul (Atom 2) (Atom 2))
-  assertEqual "8/3" (Just 2) (eval $ Div (Atom 8) (Atom 3))
-  assertEqual "8/0" Nothing (eval $ Div (Atom 8) (Atom 0))
+  assertEqual "(1+1)" (Just 2) (eval $ Add (Atom 1) (Atom 1))
+  assertEqual "(5-3)" (Just 2) (eval $ Subtr (Atom 5) (Atom 3))
+  assertEqual "(2*2)" (Just 4) (eval $ Mul (Atom 2) (Atom 2))
+  assertEqual "(8/3)" (Just 2) (eval $ Div (Atom 8) (Atom 3))
+  assertEqual "(8/0)" Nothing (eval $ Div (Atom 8) (Atom 0))
 
 evalSimpleNested :: Test
 evalSimpleNested = TestCase $ do
   assertEqual
-    "(1+1)/2*3"
+	"(((1+2)/2)*3)"
     (Just 3)
     (eval (Mul (Div (Add (Atom 1) (Atom 2)) (Atom 2)) (Atom 3)))
   assertEqual
-    "1+4-5*20/3"
+	"((1+4)-(5*(20/3)))"
     (Just (-25))
     ( eval
         ( Subtr
@@ -52,7 +52,7 @@ evalComplexStringBrackets = TestCase $ do
     (Just (-2))
     (evaluateString "((2-(2+(4+(3-2))))/((2+1)*(2-1)))")
   assertEqual
-    "(1/(2*(4-(2*2)))"
+    "(1/(2*(4-(2*2))))"
     Nothing
     (evaluateString "(1/(2*(4-(2*2))))")
 
