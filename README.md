@@ -88,6 +88,10 @@
 
 - Седмица 11 - **Пакетна система - Stack** - _07.01.2021_
 
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1uDshJSgyJDDaAWkKysOYjZ8JD7pj-gbA/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/1RNfhNjlPvD8phGLUwqDdwe1BUfm7WsdD/view?usp=sharing)
+  - 📜 [Материали](./week-11)
+
 ## 🔗 Релеватни ресурси
 
 - **[Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems) 💯**
