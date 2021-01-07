@@ -10,3 +10,7 @@
 ### Пакетна система - Стак
 
 Отива [тук](https://docs.haskellstack.org/en/stable/README/) и си я инсталирате.
+
+### Some fun stuff
+
+- [Three Useful Monads](https://adit.io/posts/2013-06-10-three-useful-monads.html)
