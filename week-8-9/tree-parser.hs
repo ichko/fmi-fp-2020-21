@@ -1,13 +1,5 @@
 import Control.Applicative (Alternative ((<|>)))
 import Parser
-  ( Parseable (..),
-    Parser (runParser),
-    char,
-    end,
-    nonWS,
-    parse,
-    ws,
-  )
 
 data Tree a
   = Empty
@@ -20,18 +12,24 @@ singleton a = Node a Empty Empty
 parseEmpty :: Parser (Tree a)
 parseEmpty = Empty <$ char '*'
 
+-- Monadic sequencing of parsers
+parseNode' :: Parser Int -> Parser (Tree Int)
+parseNode' parserA = do
+  root <- char '{' *> ws *> parserA <* ws
+  left <- parseTree parserA <* ws
+  right <- parseTree parserA <* ws <* char '}'
+
+  if root < 5
+    then abortParser "root value should be always >= 5"
+    else return $ Node root left right
+
+-- Applicative sequencing of parsers
 parseNode :: Parser a -> Parser (Tree a)
 parseNode parserA =
-  (\_ _ root _ left _ right _ _ -> Node root left right)
-    <$> char '{'
-    <*> ws
-    <*> parserA
-    <*> ws
+  Node
+    <$> (char '{' *> ws *> parserA <* ws)
+    <*> (parseTree parserA <* ws)
     <*> parseTree parserA
-    <*> ws
-    <*> parseTree parserA
-    <*> ws
-    <*> char '}'
 
 parseTree :: Parser a -> Parser (Tree a)
 parseTree parserA = parseEmpty <|> parseNode parserA
