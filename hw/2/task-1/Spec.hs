@@ -13,11 +13,11 @@ evalNonNested = TestCase $ do
 evalSimpleNested :: Test
 evalSimpleNested = TestCase $ do
   assertEqual
-	"(((1+2)/2)*3)"
+    "(((1+2)/2)*3)"
     (Just 3)
     (eval (Mul (Div (Add (Atom 1) (Atom 2)) (Atom 2)) (Atom 3)))
   assertEqual
-	"((1+4)-(5*(20/3)))"
+    "((1+4)-(5*(20/3)))"
     (Just (-25))
     ( eval
         ( Subtr
