@@ -2,11 +2,12 @@ module Lib where
 
 import Data.List
 import Data.List.Split
+import Test.Hspec
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
 
-emptyValue :: Integer
+emptyValue :: CellValue
 emptyValue = 0
 
 type Position = (Int, Int)
@@ -65,9 +66,3 @@ getEmptyPos (Sudoku list) = (\a -> (a `div` 3, a `mod` 3)) <$> posInList
 
 solveStep :: Sudoku -> Sudoku
 solveStep = undefined
-
-example :: [Int]
-example = (filter (> 20) . map (+ 1)) [1 .. 100]
-
-compose :: (b -> c) -> (a -> b) -> (a -> c)
-compose f g x = f (g x)

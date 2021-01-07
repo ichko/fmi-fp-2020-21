@@ -1,7 +1,5 @@
 # Седмица 10 - Пакетна система - Stack
 
-![](https://adit.io/imgs/functors/value_and_context.png)
-
 ## Материал
 
 ### Какво правихме предния път
