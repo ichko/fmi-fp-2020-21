@@ -29,44 +29,44 @@
 - Седмица 1 - **Функционален стил и интро в Хаскел** - _15.10.2020_
 
   - 🎥 [Запис](https://drive.google.com/file/d/1_oZFATqP4YQynCPb4CVnq1P78d9nQ7oT/view?usp=sharing)
-  - 📜 [Материали](./week-1)
+  - 📜 [Материали](./week-01)
 
 - Седмица 2 - **Pattern matching, where, let in, case of** - _22.10.2020_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1HMLcyFXpNdqQ-f2H1zmqyYOmTWdnDRQY/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/155eCHz70Tt62x_RMVVJXtATF6cY58cD3/view?usp=sharing)
-  - 📜 [Материали](./week-2)
+  - 📜 [Материали](./week-02)
   - 🌟 **[Бонус задачка - Mandelbrot](https://github.com/ichko/fmi-fp-2020-21/issues/1)**
 
 - Седмица 3 - **Функции от по висок ред, currying, map, filter, композиране** - _29.10.2020_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1fXus2l878m7rjjXB8LK98Sg6hQ7FKtmJ/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1B_pMBa0oSOEJm3pZRUk73iy6EP_GSgVS/view?usp=sharing)
-  - 📜 [Материали](./week-3)
+  - 📜 [Материали](./week-03)
   - 🌟 **[Бонус задача No. 2](https://github.com/ichko/fmi-fp-2020-21/issues/2)**
 
 - Седмица 4 - **Ламбда функции. За типове и класове** - _05.11.2020_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1a0JTn8WcdUtGfm6Qprqk8XZGRcWmStfX/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1EKBk9SQrSORQuM3RxobrSnBbj90Jf-ST/view?usp=sharing)
-  - 📜 [Материали](./week-4)
+  - 📜 [Материали](./week-04)
 
 - Седмица 5 - **Модули, писане, вградени (Map, List, Set)** - _12.11.2020_
 
   - 🎥 [Запис](https://drive.google.com/file/d/1byBHWtKPPD_OEVrWcmQszKYrcRw7Lavb/view?usp=sharing)
-  - 📜 [Материали](./week-5)
+  - 📜 [Материали](./week-05)
   - 🌟 **[Бонус задача - Console Function Plotter](https://github.com/ichko/fmi-fp-2020-21/issues/8)**
 
 - Седмица 6 - **I/O операции в Хаскел** - _19.11.2020_
 
   - 🎥 [Запис](https://drive.google.com/file/d/1GyEOSxWnB84cqSK1x35j-Enz2QakIYog/view?usp=sharing)
-  - 📜 [Материали](./week-6)
+  - 📜 [Материали](./week-06)
 
 - Седмица 7 - **I/O операции част 2** - _26.11.2020_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1vxtWaKXabMlN7HLhK5t7_x7byKKKNG2e/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1OrwLl3EzUY4E7gCdMIGYNSXMSs6tsFPK/view?usp=sharing)
-  - 📜 [Материали](./week-7)
+  - 📜 [Материали](./week-07)
 
 - Седмица 8/9 - **Функтор, апликатив, монада и още. Парсъри**
 
@@ -76,14 +76,14 @@
   - Седмица 9 - **Парсъри** - _10.12.2020_
     - 🎥 [Запис - първи час](https://drive.google.com/file/d/1oUcAWlY7Q-snbYtXnR1s0lFrTJLlCe9m/view?usp=sharing)
     - 🎥 [Запис - втори час](https://drive.google.com/file/d/14XiQTST0gmsbiqdU8CfL-TcebdU6Q50f/view?usp=sharing)
-  - 📜 [Материали](./week-8-9)
+  - 📜 [Материали](./week-08-09-10)
   - 🌟 **[Бонус задача - JsonParser](https://github.com/ichko/fmi-fp-2020-21/issues/9)**
 
 - Седмица 10 - **Alternative - продължаваме с парсърите** - _17.12.2020_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1uhbd89W5ssLAwN48PyR2mr-KxScg3J3K/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1I2-C7jkm3nis7DgDhgeOvNn2TnjWx6wp/view?usp=sharing)
-  - 📜 [Материали](./week-8-9) (продължаваме в папка week-8-9)
+  - 📜 [Материали](./week-08-09-10) (продължаваме в папка week-08-09-10)
   - 🌟 **[Бонус задача към ДР2 - Order of operations](https://github.com/ichko/fmi-fp-2020-21/blob/main/hw/2/task-1/Spec.hs#L86)**
 
 - Седмица 11 - **Пакетна система - Stack** - _07.01.2021_
