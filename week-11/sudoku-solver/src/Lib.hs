@@ -14,7 +14,7 @@ type Position = (Int, Int)
 
 type CellValue = Integer
 
-newtype Sudoku = Sudoku [CellValue] deriving (Show)
+newtype Sudoku = Sudoku [CellValue] deriving (Show, Eq)
 
 readSudoku :: String -> Sudoku
 readSudoku = Sudoku . map charToCell
@@ -59,10 +59,38 @@ getPossibleNumbers pos s = [1 .. 9] \\ impossible
     col = getPositionCol pos s
     square = getPositionSquare pos s
 
-getEmptyPos :: Sudoku -> Maybe Position
+getEmptyPos :: Sudoku -> [Position]
 getEmptyPos (Sudoku list) = (\a -> (a `div` 3, a `mod` 3)) <$> posInList
   where
-    posInList = elemIndex emptyValue list
+    posInList = indexesOf emptyValue list
+
+indexesOf :: Eq a => a -> [a] -> [Int]
+indexesOf v = map fst . filter ((== v) . snd) . zip [0 ..]
+
+updateList :: Int -> a -> [a] -> [a]
+updateList pos value list =
+  take (pos - 1) list ++ [value] ++ drop pos list
+
+updateSudoku :: Position -> CellValue -> Sudoku -> Sudoku
+updateSudoku (x, y) value (Sudoku list) =
+  Sudoku $ updateList pos value list
+  where
+    pos = y * 9 + x
 
 solveStep :: Sudoku -> Sudoku
-solveStep = undefined
+solveStep s = case clue of
+  Nothing -> s
+  Just (pos, [value]) -> updateSudoku pos value s
+  where
+    clue =
+      find ((== 1) . length . snd)
+        . map (\p -> (p, getPossibleNumbers p s))
+        $ getEmptyPos s
+
+solveSudoku :: Sudoku -> [Sudoku]
+solveSudoku s =
+  if s == newSudoku
+    then []
+    else s : solveSudoku newSudoku
+  where
+    newSudoku = solveStep s
