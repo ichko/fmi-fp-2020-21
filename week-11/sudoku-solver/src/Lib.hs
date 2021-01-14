@@ -2,7 +2,6 @@ module Lib where
 
 import Data.List
 import Data.List.Split
-import Test.Hspec
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
@@ -14,7 +13,8 @@ type Position = (Int, Int)
 
 type CellValue = Integer
 
-newtype Sudoku = Sudoku [CellValue] deriving (Show, Eq)
+newtype Sudoku = Sudoku [CellValue]
+  deriving (Show, Eq)
 
 readSudoku :: String -> Sudoku
 readSudoku = Sudoku . map charToCell
@@ -60,7 +60,7 @@ getPossibleNumbers pos s = [1 .. 9] \\ impossible
     square = getPositionSquare pos s
 
 getEmptyPos :: Sudoku -> [Position]
-getEmptyPos (Sudoku list) = (\a -> (a `div` 3, a `mod` 3)) <$> posInList
+getEmptyPos (Sudoku list) = (\a -> (a `mod` 9, a `div` 9)) <$> posInList
   where
     posInList = indexesOf emptyValue list
 
@@ -69,7 +69,7 @@ indexesOf v = map fst . filter ((== v) . snd) . zip [0 ..]
 
 updateList :: Int -> a -> [a] -> [a]
 updateList pos value list =
-  take (pos - 1) list ++ [value] ++ drop pos list
+  take pos list ++ [value] ++ drop (pos + 1) list
 
 updateSudoku :: Position -> CellValue -> Sudoku -> Sudoku
 updateSudoku (x, y) value (Sudoku list) =
