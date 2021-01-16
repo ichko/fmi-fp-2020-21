@@ -92,6 +92,12 @@
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1RNfhNjlPvD8phGLUwqDdwe1BUfm7WsdD/view?usp=sharing)
   - 📜 [Материали](./week-11)
 
+- Седмица 12 - **Примерни проекти** - _14.01.2021_
+
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1L0JzvpZeRtvySb7RT6AvXewV6TTDLpbo/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/1ASH7F02zBSj4FlSG9ZN2cTJ_bs8X-Fxi/view?usp=sharing)
+  - 📜 [Материали](./week-12)
+
 ## 🔗 Релеватни ресурси
 
 - **[Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems) 💯**
