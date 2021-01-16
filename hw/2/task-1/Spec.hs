@@ -62,8 +62,11 @@ evalSimpleStringNoBrackets :: Test
 evalSimpleStringNoBrackets = TestCase $ do
   assertEqual "1" (Just 1) (evaluateString "1")
   assertEqual "1+1" (Just 2) (evaluateString "1 +1  ")
-  assertEqual "(1+1)/2*3" (Just 0) (evaluateString "(1   +1) /2  *3 ")
-  assertEqual "1+4-5*20/3" (Just (-25)) (evaluateString " 1+4- 5*20/ 3")
+  -- Updated to (Just 3) from (Just 0) after fixing association of terms
+  -- Thanks to @dimitroffangel - Angel Dimitroff
+  assertEqual "(1+1)/2*3" (Just 3) (evaluateString "(1   +1) /2  *3 ")
+  -- Updated to (Just (-25)) from (Just (-28))
+  assertEqual "1+4-5*20/3" (Just (-28)) (evaluateString " 1+4- 5*20/ 3")
 
 evalComplexStringNoBrackets :: Test
 evalComplexStringNoBrackets = TestCase $ do
@@ -82,11 +85,11 @@ tests =
     [ evalNonNested,
       evalSimpleNested,
       evalSimpleStringBrackets,
-      evalComplexStringBrackets
+      evalComplexStringBrackets,
       -- Bonus Tests
       -- Uncomment to check if you get the <new_year_bonus_point_🍾>
-      -- evalSimpleStringNoBrackets,
-      -- evalComplexStringNoBrackets
+      evalSimpleStringNoBrackets,
+      evalComplexStringNoBrackets
     ]
 
 main :: IO Counts
