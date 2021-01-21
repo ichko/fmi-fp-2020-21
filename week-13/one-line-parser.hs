@@ -10,7 +10,7 @@ import Control.Monad.Trans.List (ListT (..))
 import Control.Monad.Trans.State (StateT (..))
 import Data.Functor.Identity (Identity (..))
 
-newtype Parser a = Parser {runParser :: (String -> [(a, String)])}
+newtype Parser a = Parser {runParser :: String -> [(a, String)]}
   deriving (Functor, Applicative, Monad, Alternative, MonadFail) via StateT String (ListT Identity)
 
 nom :: Parser Char
