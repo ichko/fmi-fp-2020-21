@@ -100,8 +100,8 @@
 
 - Седмица 13 - **Закриваме с няколко монади** - _14.01.2021_
 
-  - 🎥 [Запис - първи час](#)
-  - 🎥 [Запис - втори час](#)
+  - 🎥 [Запис - първи час](https://drive.google.com/file/d/1M9O1iT4OX1WbafrHA2WEYAcNpcmMyPLY/view?usp=sharing)
+  - 🎥 [Запис - втори час](https://drive.google.com/file/d/1iGhWm1fbwvrnwSg3OFJW65BSFVaoBSEf/view?usp=sharing)
   - 📜 [Материали](./week-13)
 
 ## 🔗 Релеватни ресурси
