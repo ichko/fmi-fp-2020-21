@@ -98,6 +98,12 @@
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1ASH7F02zBSj4FlSG9ZN2cTJ_bs8X-Fxi/view?usp=sharing)
   - 📜 [Материали](./week-12)
 
+- Седмица 13 - **Закриваме с няколко монади** - _14.01.2021_
+
+  - 🎥 [Запис - първи час](#)
+  - 🎥 [Запис - втори час](#)
+  - 📜 [Материали](./week-13)
+
 ## 🔗 Релеватни ресурси
 
 - **[Ninety-Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems) 💯**
