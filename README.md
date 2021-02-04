@@ -10,6 +10,7 @@
 
 - 🏫 [Линк към курса в мудъл](https://learn.fmi.uni-sofia.bg/course/view.php?id=6685)
 - ⚡️ [Всяко парче код събмитнато към курса трябва да отговаря на следните критерии](https://github.com/ichko/fmi-fp-2020-21/wiki/%D0%94%D0%BE%D0%B1%D1%80%D0%B8-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8,-%D0%BA%D0%BE%D0%B8%D1%82%D0%BE-%D0%B4%D0%B0-%D1%81%D0%BB%D0%B5%D0%B4%D0%B2%D0%B0%D0%BC%D0%B5!)
+- 📊 **[Резултати - проекти / домашни / оценки](https://docs.google.com/spreadsheets/d/1qiYF5897-BWWkNrAOHXxsAPDD3ykI7TUJ9c0KOw-hUc/edit?usp=sharing)**
 
 ## 🎯 Проекти
 
@@ -20,7 +21,6 @@
 ## 📝 Домашни
 
 - [Първо домашно](https://docs.google.com/document/d/1Z6N1EYgBlo5_c2YzXGf0yVfTO4O8fzN4xOrFBxtsQDY/edit?usp=sharing)
-- [Първо домашно - резултати](https://docs.google.com/spreadsheets/d/1qiYF5897-BWWkNrAOHXxsAPDD3ykI7TUJ9c0KOw-hUc/edit?usp=sharing)
 
 - [Второ домашно](https://github.com/ichko/fmi-fp-2020-21/tree/main/hw/2)
 
@@ -98,7 +98,7 @@
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1ASH7F02zBSj4FlSG9ZN2cTJ_bs8X-Fxi/view?usp=sharing)
   - 📜 [Материали](./week-12)
 
-- Седмица 13 - **Закриваме с няколко монади** - _14.01.2021_
+- Седмица 13 - **Закриваме с няколко монади** - _21.01.2021_
 
   - 🎥 [Запис - първи час](https://drive.google.com/file/d/1M9O1iT4OX1WbafrHA2WEYAcNpcmMyPLY/view?usp=sharing)
   - 🎥 [Запис - втори час](https://drive.google.com/file/d/1iGhWm1fbwvrnwSg3OFJW65BSFVaoBSEf/view?usp=sharing)
