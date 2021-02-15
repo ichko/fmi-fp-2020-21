@@ -10,7 +10,7 @@
 
 - 🏫 [Линк към курса в мудъл](https://learn.fmi.uni-sofia.bg/course/view.php?id=6685)
 - ⚡️ [Всяко парче код събмитнато към курса трябва да отговаря на следните критерии](https://github.com/ichko/fmi-fp-2020-21/wiki/%D0%94%D0%BE%D0%B1%D1%80%D0%B8-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8,-%D0%BA%D0%BE%D0%B8%D1%82%D0%BE-%D0%B4%D0%B0-%D1%81%D0%BB%D0%B5%D0%B4%D0%B2%D0%B0%D0%BC%D0%B5!)
-- 📊 **[Резултати - проекти / домашни / оценки](https://docs.google.com/spreadsheets/d/1qiYF5897-BWWkNrAOHXxsAPDD3ykI7TUJ9c0KOw-hUc/edit?usp=sharing)**
+- 📊 **[Резултати - проекти / домашни / оценки](https://docs.google.com/spreadsheets/d/e/2PACX-1vQFVQXuf-tDNFD_rWfr3LzQ7Ti69ftjqSvUadBJfLgb70RjT99GwTOHkmfpfwDzTcNMw4mAImvWq5JL/pubhtml?gid=359598879&single=true)**
 
 ## 🎯 Проекти
 
