@@ -28,7 +28,7 @@
 
 - Седмица 1 - **Функционален стил и интро в Хаскел** - _15.10.2020_
 
-  - 🎥 [Запис](https://drive.google.com/file/d/1_oZFATqP4YQynCPb4CVnq1P78d9nQ7oT/view?usp=sharing)
+  - 🎥 [Запис](https://drive.google.com/file/d/1Adep6pnU0BbEXOmVdDR9uMpSzChYa2Ly/view?usp=sharing)
   - 📜 [Материали](./week-01)
 
 - Седмица 2 - **Pattern matching, where, let in, case of** - _22.10.2020_
